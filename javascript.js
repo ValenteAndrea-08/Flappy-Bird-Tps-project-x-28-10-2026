@@ -121,7 +121,7 @@ function update(){
     context.fillStyle = "white";
     context.font = "45px sans-serif";
     context.textAlign ="left";
-    context.fillText(score, 180, 45);
+    context.fillText(score, 170, 45);
 }
  
  
