@@ -1,9 +1,40 @@
-body{
-    font-family: 'Courier New', Courier, monospace;
-    text-align: center;
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
 }
 
 #board {
-    /*background-color: skyblue;*/
-    background-image: url("./backgroundfp.webp");
+    background-image: url("./img/backgroundpfp.webp");
+    background-size: cover;
+    background-position: center;
+}
+
+#board.sfondo2{
+    background-image: url("./img/back1.webp");
+}
+
+.footer {
+    margin-top: 15px;
+    padding: 10px;
+    color: #888;
+    font-weight: bolder;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 13px;
+    text-align: center;
+}
+
+#btnSfondo {
+    padding: 8px 15px;
+    background: #ffd166;
+    color: #14213d;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#btnSfondo:hover {
+    background: #ffb703;
 }
