@@ -43,16 +43,9 @@ window.onload = function () {
     board.width = boardWidth;
     context = board.getContext("2d"); //usato per disegnare sulla board
    
-    //disegno di flappy bird
-    //context.fillStyle = "green";
-    //context.fillRect(bird.x, bird.y, bird.width, bird.height);
-   
     //caricamento immagini
     birdImg = new Image();
     birdImg.src = "./img/Marx.png";
-    birdImg.onload = function(){
-        context.drawImage(birdImg, bird.x, bird.y, bird.width, bird.height);
-    }
 
     topPipeImg = new Image();
     topPipeImg.src = "./img/toppipe.png";
@@ -95,8 +88,7 @@ function update(){
    
     //bird
     velocityY += gravity;
-    //bird.y += velocityY;
-    bird.y = Math.max(bird.y + velocityY, 0); //applica la gravità a bird.y al top del canvas
+    bird.y = Math.max(bird.y + velocityY, 0); //applica la gravità a bird.y 
     context.drawImage(birdImg, bird.x, bird.y, bird.width, bird.height);
  
     if (bird.y > board.height) {
@@ -128,7 +120,8 @@ function update(){
     //punteggio
     context.fillStyle = "white";
     context.font = "45px sans-serif";
-    context.fillText(score, 5, 45);
+    context.textAlign ="left";
+    context.fillText(score, 10, 45);
 }
  
  
